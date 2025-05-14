@@ -1,0 +1,96 @@
+<!-- moon.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌙 달 일지</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-image: url('forest.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      font-family: 'Pretendard', sans-serif;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    h2 {
+      font-size: 30px;
+      margin-bottom: 40px;
+    }
+    .post-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-items: center;
+    }
+    .post-list a {
+      font-size: 20px;
+      color: #ffddee;
+      text-decoration: none;
+      padding: 10px 20px;
+      border: 1px solid #ffddee;
+      border-radius: 8px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .post-list a:hover {
+      background-color: #ffddee;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+  <h2>🌙 달 일지</h2>
+  <div class="post-list">
+    <a href="moon-post1.html">달 일지 제1권 1호</a>
+    <a href="moon-post2.html">달 일지 조각</a>
+    <a href="moon-post3.html">달 일지 제5권 9호</a>
+  </div>
+</body>
+</html>
+
+<!-- moon-post1.html (글 템플릿) -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>달 일지 제1권 1호</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-image: url('forest.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      font-family: 'Pretendard', sans-serif;
+      color: white;
+      padding: 100px 20px;
+      line-height: 1.8;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    a {
+      color: #ffddee;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>달 일지 제1권 1호</h1>
+    <p>달은 오늘도 조용히 떠 있었습니다.<br>
+    어제보다 조금 더 가까워진 듯한 기분이 들었어요.<br>
+    침묵 속에서 울리는 감정들을 조용히 적어 내려가며...</p>
+
+    <p style="margin-top: 2em;"><a href="moon.html">← 달 일지로 돌아가기</a></p>
+  </div>
+</body>
+</html>
