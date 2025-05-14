@@ -1,9 +1,9 @@
 
 body {
-  background-image: url('forest.jpg');
+  background-image: url('forest.jpg.png');
   background-size: cover;
   background-attachment: fixed;
-  font-family: 'Pretendard', sans-serif;
+  font-family: sans-serif;
   color: white;
   text-align: center;
   padding: 80px 20px;
