@@ -1,53 +1,109 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jooha's Archive</title>
+  <title>JUHAWORLD</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
     body {
+      font-family: sans-serif;
+      color: white;
+    }
+    #loading-screen {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100vh;
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    #loading-screen h1 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    #blinker {
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    #main-content {
       background-image: url('forest.jpg.png');
       background-size: cover;
       background-attachment: fixed;
-      font-family: 'Pretendard', sans-serif;
-      color: white;
+      min-height: 100vh;
       text-align: center;
       padding: 100px 20px;
     }
-    h1 {
-      font-size: 25px;
-      margin-bottom: 40px;
-      animation: fadeIn 1.5s forwards;
+    .about-photo {
+      width: 240px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+    .intro p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 10px;
     }
     .menu {
+      margin-top: 80px;
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      align-items: center;
+      gap: 16px;
     }
     .menu a {
-      font-size: 22px;
+      font-size: 18px;
       color: #ffddee;
       text-decoration: none;
       padding: 10px 20px;
       border: 1px solid #ffddee;
       border-radius: 8px;
-      transition: background-color 0.3s, color 0.3s;
+      transition: all 0.3s;
     }
     .menu a:hover {
       background-color: #ffddee;
-      color: #222;
+      color: black;
     }
   </style>
 </head>
 <body>
-  <h1>장대비가 와도 영원할 조각들을 모아요!</h1>
-  <div class="menu">
-    <a href="about.html">about</a>
-    <a href="contact.html">Contact me</a>
-    <a href="library.html">주하네 책방 ✨</a>
+  <div id="loading-screen">
+    <h1>장대비가 와도 영원할 조각들을 모아요!</h1>
+    <p id="blinker">조각 줍는 중...</p>
   </div>
+
+  <div id="main-content">
+    <img src="jooha-reading.jpg" alt="책 읽는 주하" class="about-photo">
+    <div class="intro">
+      <p>소리와 침묵 사이</p>
+      <p>기억 그리고 감정을</p>
+      <p>문장으로 건져 올립니다.</p>
+      <br>
+      <p>이곳은 제 조각들을 모아놓은 작은 숲입니다.</p>
+      <p>장대비가 와도 영원할 이야기들이,</p>
+      <p>이 페이지의 어디엔가 당신과 만나기를 기다립니다.</p>
+    </div>
+    <div class="menu">
+      <a href="contact.html">Contact me</a>
+      <a href="library.html">주하네 책방 ✨</a>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.getElementById("loading-screen").style.display = "none";
+        document.getElementById("main-content").scrollIntoView({ behavior: "smooth" });
+      }, 2800);
+    });
+  </script>
 </body>
 </html>
